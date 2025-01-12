@@ -1,6 +1,6 @@
 import styles from "./ContactHeader.module.css";
 
-const ConactHeader = () => {
+const ContactHeader = () => {
   return (
     <div className={`${styles.contact_section} container`}>
       <h1>CONTACT US</h1>
@@ -14,4 +14,4 @@ const ConactHeader = () => {
   );
 };
 
-export default ConactHeader;
+export default ContactHeader;

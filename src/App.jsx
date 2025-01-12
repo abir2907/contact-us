@@ -1,14 +1,16 @@
 import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
-import ConactHeader from "./components/ContactHeader/ConactHeader";
+import ContactHeader from "./components/ContactHeader/ContactHeader";
 import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (
     <div>
       <Navigation />
-      <ConactHeader />
-      <ContactForm />
+      <main className="main_container">
+        <ContactHeader />
+        <ContactForm />
+      </main>
     </div>
   );
 }
