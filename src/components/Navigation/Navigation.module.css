@@ -1,9 +1,11 @@
 .navigation {
-  padding: 0 8px;
-  display: flex;
+  padding: 0 1rem;
   height: 72px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
+  background: white;
 }
 
 .navigation ul {
