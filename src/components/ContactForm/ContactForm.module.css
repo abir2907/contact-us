@@ -28,6 +28,7 @@
 .form_control textarea {
   width: 100%;
   resize: none;
+  padding: 8px;
 }
 
 .contact_image {

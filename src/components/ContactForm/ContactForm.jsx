@@ -3,8 +3,20 @@ import styles from "./ContactForm.module.css";
 import { MdMessage } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { useState } from "react";
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [text, setText] = useState("");
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    setName(event.target[0].value);
+    setEmail(event.target[1].value);
+    setText(event.target[2].value);
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.contact_form}>
@@ -20,7 +32,7 @@ const ContactForm = () => {
           text="VIA EMAIL FORM"
           icon={<IoMdMail fontSize="24px" />}
         />
-        <form>
+        <form onSubmit={onSubmit}>
           <div className={styles.form_control}>
             <label htmlFor="name">Name</label>
             <input type="text" name="name" />
@@ -41,6 +53,8 @@ const ContactForm = () => {
           >
             <Button text="SUBMIT" icon={<IoMdMail fontSize="24px" />} />
           </div>
+
+          <div>{name + " " + email + " " + text}</div>
         </form>
       </div>
 
