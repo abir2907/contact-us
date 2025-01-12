@@ -31,13 +31,21 @@ const ContactForm = () => {
           </div>
           <div className={styles.form_control}>
             <label htmlFor="text">Text</label>
-            <textarea name="text" />
+            <textarea name="text" rows="8" />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "end",
+            }}
+          >
+            <Button text="SUBMIT" icon={<IoMdMail fontSize="24px" />} />
           </div>
         </form>
       </div>
 
       <div className={styles.contact_image}>
-        <img src="./images/contact.svg" alt="" />
+        <img src="./images/contact.svg" alt="contact image" />
       </div>
     </section>
   );
