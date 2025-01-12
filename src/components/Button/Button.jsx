@@ -1,11 +1,11 @@
 import styles from "./Button.module.css";
 import PropTypes from "prop-types";
 
-const Button = (props) => {
+const Button = ({ isOutline, icon, text }) => {
   return (
-    <button className={styles.primary_btn}>
-      {props.icon}
-      {props.text}
+    <button className={isOutline ? styles.outline_btn : styles.primary_btn}>
+      {icon}
+      {text}
     </button>
   );
 };
@@ -13,6 +13,7 @@ const Button = (props) => {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
+  isOutline: PropTypes.bool.isRequired,
 };
 
 export default Button;
