@@ -1,4 +1,5 @@
 import "./App.css";
+import ContactForm from "./components/ContactForm/ContactForm";
 import ConactHeader from "./components/ContactHeader/ConactHeader";
 import Navigation from "./components/Navigation/Navigation";
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Navigation />
       <ConactHeader />
+      <ContactForm />
     </div>
   );
 }
